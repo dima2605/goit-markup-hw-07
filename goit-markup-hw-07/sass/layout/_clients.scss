@@ -8,6 +8,10 @@
 
   width: 170px;
   height: 92px;
+
+  &:first-child {
+    margin-left: 0;
+  }
 }
 
 .clients__link {
@@ -22,21 +26,18 @@
   align-items: center;
 
   transition: border 250ms var(--time-function);
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+  }
 }
-.clients__item:first-child {
-  margin-left: 0;
-}
+
 .clients__icon {
   fill: var(--background-soc-icon);
 
   transition: fill 250ms var(--time-function);
-}
-.clients__link:hover,
-.clients__link:focus {
-  border-color: var(--accent-color);
-}
-
-.clients__link:hover .clients__icon,
-.clients__link:focus .clients__icon {
-  fill: var(--accent-color);
+  .clients__link:hover &,
+  .clients__link:focus & {
+    fill: var(--accent-color);
+  }
 }

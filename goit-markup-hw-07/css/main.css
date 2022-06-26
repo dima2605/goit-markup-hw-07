@@ -55,7 +55,6 @@ img {
   box-shadow: var(--box-shadow--accent);
   transition: opacity 250ms var(--time-function), transform 250ms var(--time-function), visibility 250ms var(--time-function);
 }
-
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
@@ -91,7 +90,6 @@ img {
   cursor: pointer;
   transition: box-shadow 250ms var(--time-function);
 }
-
 .modal__close-btn:hover {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
@@ -131,16 +129,7 @@ img {
   border-radius: 4px;
   transition: border 250ms var(--time-function);
 }
-
-.modal__input:hover + .modal__icon,
-.modal__input:focus + .modal__icon {
-  fill: var(--accent-color);
-}
-
-.modal__input:hover,
-.modal__input:focus,
-.modal__area:hover,
-.modal__area:focus {
+.modal__input:hover, .modal__input:focus {
   border-color: var(--accent-color);
   outline: none;
 }
@@ -151,6 +140,9 @@ img {
   top: 50%;
   transform: translatey(-50%);
   transition: fill 250ms var(--time-function);
+}
+.modal__input:hover + .modal__icon, .modal__input:focus + .modal__icon {
+  fill: var(--accent-color);
 }
 
 .modal__area {
@@ -165,14 +157,15 @@ img {
   border-radius: 4px;
   transition: border 250ms var(--time-function);
 }
-
+.modal__area:hover, .modal__area:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
 .modal__area::placeholder {
   transition: font-size 250ms var(--time-function);
   color: rgba(117, 117, 117, 0.5);
 }
-
-.modal__area:hover::placeholder,
-.modal__area:focus::placeholder {
+.modal__area:hover::placeholder, .modal__area:focus::placeholder {
   font-size: 14px;
 }
 
@@ -196,18 +189,17 @@ img {
   border-radius: 2px;
   fill: transparent;
 }
+.modal__check-input:checked + .modal__check-label .modal__check-icon {
+  background-color: var(--accent-color);
+  fill: #ffffff;
+  border: none;
+}
 
 .modal__check-text {
   margin-left: 8px;
   font-size: 14px;
   line-height: 1.71;
   color: var(--primary-text-color);
-}
-
-.modal__check-input:checked + .modal__check-label .modal__check-icon {
-  background-color: var(--accent-color);
-  fill: #ffffff;
-  border: none;
 }
 
 .modal__check-link {
@@ -237,9 +229,7 @@ img {
   transition: box-shadow 250ms var(--time-function);
   cursor: pointer;
 }
-
-.modal__check-button:hover,
-.modal__check-button:focus {
+.modal__check-button:hover, .modal__check-button:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -270,13 +260,12 @@ body {
   overflow: hidden;
 }
 
-.nav__page-logo:focus {
-  color: var(--accent-color);
-}
-
 .nav__page-logo {
   padding-top: 25px;
   padding-bottom: 25px;
+}
+.nav__page-logo:focus {
+  color: var(--accent-color);
 }
 
 .nav__logo-active {
@@ -319,6 +308,9 @@ body {
   color: var(--title-text-color);
   transition: color 250ms var(--time-function);
 }
+.nav__link:hover, .nav__link:focus {
+  color: var(--accent-color);
+}
 
 .header__nav-list {
   display: flex;
@@ -357,11 +349,7 @@ body {
   color: var(--primary-text-color);
   transition: color 250ms var(--time-function);
 }
-
-.nav__link:hover,
-.nav__link:focus,
-.auth__link:focus,
-.auth__link:hover {
+.auth__link:focus, .auth__link:hover {
   color: var(--accent-color);
 }
 
@@ -369,7 +357,6 @@ body {
   position: relative;
   color: var(--accent-color);
 }
-
 .nav__current:after {
   content: "";
   position: absolute;
@@ -424,9 +411,7 @@ body {
   cursor: pointer;
   transition: background-color 250ms var(--time-function);
 }
-
-.hero__btn:hover,
-.hero__btn:focus {
+.hero__btn:hover, .hero__btn:focus {
   background-color: var(--second-accent-color);
 }
 
@@ -464,7 +449,6 @@ body {
 .section-list__item {
   margin-left: 30px;
 }
-
 .section-list__item:first-child {
   margin-left: 0;
 }
@@ -500,7 +484,6 @@ body {
 .activity__item {
   margin-left: 30px;
 }
-
 .activity__item:first-child {
   margin-left: 0;
 }
@@ -532,7 +515,6 @@ body {
   height: 44px;
   margin-left: 10px;
 }
-
 .soc__item:first-child {
   margin-left: 0;
 }
@@ -553,19 +535,15 @@ body {
   background-color: var(--primary-background-color);
   transition: background-color 250ms var(--time-function);
 }
+.soc__link:hover, .soc__link:focus {
+  background-color: var(--accent-color);
+}
 
 .soc__icon {
   fill: var(--background-soc-icon);
   transition: fill 250ms var(--time-function);
 }
-
-.soc__link:hover,
-.soc__link:focus {
-  background-color: var(--accent-color);
-}
-
-.soc__link:hover .soc__icon,
-.soc__link:focus .soc__icon {
+.soc__link:hover .soc__icon, .soc__link:focus .soc__icon {
   fill: var(--primary-background-color);
 }
 
@@ -593,7 +571,6 @@ body {
 .team__item {
   margin-left: 30px;
 }
-
 .team__item:first-child {
   margin-left: 0;
 }
@@ -625,6 +602,9 @@ body {
   width: 170px;
   height: 92px;
 }
+.clients__item:first-child {
+  margin-left: 0;
+}
 
 .clients__link {
   display: flex;
@@ -636,23 +616,15 @@ body {
   align-items: center;
   transition: border 250ms var(--time-function);
 }
-
-.clients__item:first-child {
-  margin-left: 0;
+.clients__link:hover, .clients__link:focus {
+  border-color: var(--accent-color);
 }
 
 .clients__icon {
   fill: var(--background-soc-icon);
   transition: fill 250ms var(--time-function);
 }
-
-.clients__link:hover,
-.clients__link:focus {
-  border-color: var(--accent-color);
-}
-
-.clients__link:hover .clients__icon,
-.clients__link:focus .clients__icon {
+.clients__link:hover .clients__icon, .clients__link:focus .clients__icon {
   fill: var(--accent-color);
 }
 
@@ -684,15 +656,13 @@ body {
   color: var(--footer-color);
   transition: color 250ms var(--time-function);
 }
+.menu__link-direction:hover, .menu__link-direction:focus {
+  color: var(--accent-color);
+}
 
 .menu__link-direction,
 .menu__home-link {
   line-height: 1.71;
-}
-
-.menu__link-direction:hover,
-.menu__link-direction:focus {
-  color: var(--accent-color);
 }
 
 .menu__home-link {
@@ -727,7 +697,6 @@ body {
   margin-left: 10px;
   border-radius: 50%;
 }
-
 .join__item:first-child {
   margin-left: 0;
 }
@@ -742,14 +711,12 @@ body {
   border-radius: 50%;
   transition: background-color 250ms var(--time-function);
 }
+.join__link:hover, .join__link:focus {
+  background-color: var(--accent-color);
+}
 
 .join__icon {
   fill: var(--primary-background-color);
-}
-
-.join__link:hover,
-.join__link:focus {
-  background-color: var(--accent-color);
 }
 
 /* ====================subscribe======================= */
@@ -782,9 +749,7 @@ body {
   background-color: var(--second-background-color);
   transition: border-color 250ms var(--time-function);
 }
-
-.subscribe__input:hover,
-.subscribe__input:focus {
+.subscribe__input:hover, .subscribe__input:focus {
   border-color: var(--accent-color);
 }
 
@@ -807,9 +772,7 @@ body {
   transition: box-shadow 250ms var(--time-function), background-color 250ms var(--time-function);
   cursor: pointer;
 }
-
-.subscribe__button:hover,
-.subscribe__button:focus {
+.subscribe__button:hover, .subscribe__button:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: var(--second-accent-color);
 }
@@ -828,7 +791,6 @@ body {
 .filter__item {
   margin-left: 8px;
 }
-
 .filter__item:first-child {
   margin-left: 0;
 }
@@ -848,22 +810,18 @@ body {
   cursor: pointer;
   transition: background-color 250ms var(--time-function), color 250ms var(--time-function), box-shadow 250ms var(--time-function);
 }
-
-.filter__btn:hover,
-.filter__btn:focus {
+.filter__btn:hover, .filter__btn:focus {
   color: var(--white-text-color);
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 /* ------------section-------------- */
-.portfolio__link:hover,
-.portfolio__link:focus {
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-
 .portfolio__link {
   transition: box-shadow 250ms var(--time-function);
+}
+.portfolio__link:hover, .portfolio__link:focus {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .portfolio__list {
@@ -877,11 +835,9 @@ body {
   margin-left: 30px;
   margin-bottom: 30px;
 }
-
 .portfolio__item:nth-child(3n+1) {
   margin-left: 0;
 }
-
 .portfolio__item:nth-last-child(-n+3) {
   margin-bottom: 0;
 }
@@ -923,7 +879,6 @@ body {
   transform: translateY(100%);
   transition: transform 250ms var(--time-function);
 }
-
 .portfolio__item:hover .portfolio__overlay {
   transform: translate(0);
 }

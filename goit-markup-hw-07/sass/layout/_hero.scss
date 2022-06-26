@@ -50,9 +50,8 @@
   cursor: pointer;
 
   transition: background-color 250ms var(--time-function);
-}
-
-.hero__btn:hover,
-.hero__btn:focus {
-  background-color: var(--second-accent-color);
+  &:hover,
+  &:focus {
+    background-color: var(--second-accent-color);
+  }
 }

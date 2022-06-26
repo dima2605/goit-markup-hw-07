@@ -14,10 +14,9 @@
 
 .activity__item {
   margin-left: 30px;
-}
-
-.activity__item:first-child {
-  margin-left: 0;
+  &:first-child {
+    margin-left: 0;
+  }
 }
 
 .activity__item {
